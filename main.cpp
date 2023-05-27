@@ -98,7 +98,6 @@ void ProductoRopa::mostrarRopa() {
     cout << "Precio: " << precio << endl;
 }
 
-
 int main() {
     ProductoElectronico pe(01, "Teclado Gamer", "Electronico", "Logitech", 2500, "LKP500", 2023);
     ProductoRopa pr(02, "Sudadera", "Ropa", "H&M", 600, "M", "Café");
