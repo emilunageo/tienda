@@ -38,9 +38,8 @@ Con el contexto anterior he decido realizar un programa en c++ que atienda estas
 El programa solo corre en la consola y está hecho con c++ standard por lo que corre en todos los sistemas operativos:
 
 <ol>
-    <li>Compilar con: "g++ Tienda.h Inventario.h Producto.h ProductoElectronico.h ProductoRopa.h Cliente.h Carrito.h main.cpp"
-    </li>
-    <li>Correr en linux: "/a.out"</li>
+    <li>Compilar con: "g++ main.cpp"</li>
+    <li>Correr en linux y Mac: "/a.out"</li>
     <li>Correr en windows: "a.exe"</li>
 </ol>
 
