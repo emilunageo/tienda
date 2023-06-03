@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-class Tienda
-{
+
+class Tienda{
 private:
     string nombre;
 public:
@@ -18,7 +18,7 @@ protected:
     float precio;
 public:
     Producto(int, string, string, string, float);
-    void mostrarProducto();
+    virtual void mostrarProducto();
     void mostrarProducto(string detalleAdicional);
 };
 
@@ -28,7 +28,7 @@ private:
     int year;
 public:
     ProductoElectronico(int, string, string, string, float, string, int);
-    void mostrarElectronico();
+    void mostrarProducto();
 };
 
 class ProductoRopa : public Producto{
@@ -37,7 +37,7 @@ private:
     string color;
 public:
     ProductoRopa(int, string, string, string, float, string, string);
-    void mostrarRopa();
+    void mostrarProducto();
 };
 
 Producto::Producto(int _id, string _nombre, string _tipo, string _marca, float _precio){
@@ -68,29 +68,19 @@ void Producto::mostrarProducto(){
     cout << "Precio: " << precio << endl;
 }
 
-void Producto::mostrarProducto(string detalleAdicional){
+void ProductoElectronico::mostrarProducto(){
     cout << endl;
-    cout << "El producto es: " << endl;
-    cout << "ID: " << id << endl;
-    cout << "Nombre: " << nombre << endl;
-    cout << "Tipo de producto: " << tipo << endl;
-    cout << "Marca: " << marca << endl;
-    cout << "Precio: " << precio << endl;
-    cout << "Detalle adicional: " << detalleAdicional << endl;
-}
-
-void ProductoElectronico::mostrarElectronico(){
-    cout << endl;
+    Producto::mostrarProducto();
     cout << "El electronico es: " << endl;
     cout << "Marca: " << marca << endl;
     cout << "Modelo: " << modelo <<endl;
     cout << "Año: " << year << endl;
     cout << "Precio: " << precio << endl;
-
 }
 
-void ProductoRopa::mostrarRopa() {
+void ProductoRopa::mostrarProducto() {
     cout << endl;
+    Producto::mostrarProducto();
     cout << "La prenda es: " << endl;
     cout << "Marca: " << marca << endl;
     cout << "Talla: " << talla << endl;
@@ -99,12 +89,10 @@ void ProductoRopa::mostrarRopa() {
 }
 
 int main() {
-    ProductoElectronico pe(01, "Teclado Gamer", "Electronico", "Logitech", 2500, "LKP500", 2023);
-    ProductoRopa pr(02, "Sudadera", "Ropa", "H&M", 600, "M", "Café");
-    pe.mostrarElectronico();
-    pr.mostrarRopa();
-    pe.mostrarProducto();
-    pr.mostrarProducto();
-    pe.mostrarProducto("Este teclado es una edición limitada.");
+    Producto *productos[3];
+    productos[0] = new ProductoElectronico(01, "Teclado Gamer", "Electronico", "Logitech", 2500, "LKP500", 2023);
+    productos[0]->mostrarProducto();
+    productos[1] = new ProductoRopa(02, "Sudadera", "Ropa", "H&M", 600, "M", "Café");
+    productos[1]->mostrarProducto();
     return 0;
 }
