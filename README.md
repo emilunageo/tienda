@@ -13,10 +13,10 @@ En resumen, las tiendas en línea desempeñan un papel importante en el panorama
 
 ## Explicación
 
-Con el contexto anterior he decido realizar un programa en c++ que atienda estas necesidades de modo que el programa crea una <b>Tienda</b> la cuál tiene un <b>Inventario</b> a esté inventario se le agregan <b>Productos</b> que puden ser de tipo <b>Electronico</b> o <b>Alimenticio</b>, estos a su vez pueden ser añadidos a un <b>Carrito</b> el cuál puede ser manipulado por por el <b>Cliente</b> de modo que el cliente puedo añadir productos al carrito, eliminarlos o realizar un pedido, el cliente también podría:
+Con el contexto anterior he decido realizar un programa en c++ que atienda estas necesidades de modo que el programa crea una <b>Tienda</b> la cuál tiene un <b>Inventario</b> a esté inventario se le agregan <b>Productos</b> que puden ser de tipo <b>Electronico</b> o <b>Ropa</b>, estos a su vez pueden ser añadidos a un <b>Carrito</b> el cuál puede ser manipulado por por el <b>Cliente</b> de modo que el cliente puedo añadir productos al carrito, eliminarlos, editar la cantidad a comprar y realizar un pedido, el cliente también podría:
 <ul>
-    <li>Obtener una factura</li>
-    <li>Ver su historial de compras</li>
+    <li>- Obtener una factura</li>
+    <li>- Ver su historial de compras</li>
 </ul> 
 
 

@@ -1,6 +1,12 @@
 #include <iostream>
 #include <string>
 using namespace std;
+class Tienda{
+private:
+    string nombre;
+public:
+    Tienda(string);
+};
 
 // Clase abstracta ProductoAbstracto
 class ProductoAbstracto {
@@ -68,21 +74,3 @@ public:
         cout << "Color: " << color << endl;
     }
 };
-
-int main() {
-    ProductoAbstracto* productos[2];
-    productos[0] = new ProductoElectronico(1, "Teclado Gamer", "Electrónico", "Logitech", 2500, "LKP500", 2023);
-    productos[1] = new ProductoRopa(2, "Sudadera", "Ropa", "H&M", 600, "M", "Café");
-
-    for (int i = 0; i < 2; i++) {
-        productos[i]->mostrarProducto();
-        cout << endl;
-    }
-
-    // Liberar memoria
-    for (int i = 0; i < 2; i++) {
-        delete productos[i];
-    }
-
-    return 0;
-}
